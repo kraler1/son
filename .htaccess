@@ -1,0 +1,7 @@
+DirectoryIndex passenger_wsgi.py
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/passenger_wsgi.py
+    RewriteRule ^(.*)$ http://127.0.0.1:8501/$1 [P,L]
+</IfModule>
